@@ -299,7 +299,7 @@ void ParseTextCode(char* text, int tlen, u32* code, int clen) // or whatever thi
 
 #pragma mark - Inputs -
 
-- (void)activateInput:(NSInteger)input value:(double)value
+- (void)activateInput:(NSInteger)input value:(double)value at:(NSInteger)playerIndex
 {
     self.activatedInputs |= (uint32_t)input;
     
@@ -321,7 +321,7 @@ void ParseTextCode(char* text, int tlen, u32* code, int clen) // or whatever thi
     self.touchScreenPoint = touchPoint;
 }
 
-- (void)deactivateInput:(NSInteger)input
+- (void)deactivateInput:(NSInteger)input at:(NSInteger)playerIndex
 {
     self.activatedInputs &= ~((uint32_t)input);
     
