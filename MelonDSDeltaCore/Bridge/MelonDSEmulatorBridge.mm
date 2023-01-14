@@ -445,11 +445,11 @@ void ParseTextCode(char* text, int tlen, u32* code, int clen) // or whatever thi
         
         if (state == 0)
         {
-            [self deactivateInput:MelonDSGameInputLid];
+            [self deactivateInput:MelonDSGameInputLid at:0];
         }
         else
         {
-            [self activateInput:MelonDSGameInputLid value:1];
+            [self activateInput:MelonDSGameInputLid value:1 at:0];
         }
         
         if (result != NOTIFY_STATUS_OK)
